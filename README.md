@@ -1,7 +1,3 @@
-Here's an updated GitHub project description with a mention of the feature gap in the native iOS app:
-
----
-
 # MultiTimeX
 
 MultiTimeX is a simple and intuitive iOS app designed to help you keep track of time until a specified target. While the native iOS Clock app provides basic timer functionality, it lacks the ability to set countdowns to specific future times with a clear visual progress indicator. MultiTimeX fills this gap by offering a clean and user-friendly interface to manage your countdowns.
