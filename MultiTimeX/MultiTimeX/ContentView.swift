@@ -43,9 +43,11 @@ struct ContentView: View {
         NavigationStack {
             VStack {
                 if isRunning {
+                    Spacer()
+                    
                     VStack(spacing: 8) {
                         Text(timeString(from: timeRemaining))
-                            .font(.system(size: 78, weight: .bold))
+                            .font(.system(size: 94, weight: .bold))
                             .foregroundColor(timeRemaining > 0 ? .white : .red)
                             .minimumScaleFactor(0.6)
                             .contentTransition(.numericText())
@@ -79,7 +81,10 @@ struct ContentView: View {
                             .animation(.smooth, value: progress)
                             .padding(.top, -2)
                         
-                        Button(action: stopTimer) {
+                        Button(action: {
+                            stopTimer()
+                            triggerHapticFeedback()
+                        }) {
                             Text("Stop Timer")
                                 .font(.headline)
                                 .foregroundColor(.white)
@@ -90,14 +95,10 @@ struct ContentView: View {
                         }
                         .padding(.horizontal, 40)
                         .padding(.top, 10)
-                        
-                        Text("Made by Ra-Rauw!")
-                            .font(.caption)
-                            .foregroundColor(.gray)
-                            .padding(.top, 8)
-                            .padding(.bottom, 20)
                     }
                     .padding()
+                    
+                    Spacer()
                 } else {
                     VStack {
                         Spacer()
@@ -123,7 +124,10 @@ struct ContentView: View {
                                 .frame(height: 150)
                                 .padding(.horizontal, 20)
                             
-                            Button(action: startTimer) {
+                            Button(action: {
+                                startTimer()
+                                triggerHapticFeedback()
+                            }) {
                                 Text("Start Timer")
                                     .font(.headline)
                                     .foregroundColor(.white)
@@ -137,14 +141,12 @@ struct ContentView: View {
                         .padding(.vertical, 20)
                         
                         Spacer()
-                        
-                        Text("Made by Ra-Rauw!")
-                            .font(.caption)
-                            .foregroundColor(.gray)
-                            .padding(.top, 8)
-                            .padding(.bottom, 20)
                     }
                 }
+                Text("Made by Ra-Rauw!")
+                    .font(.caption)
+                    .foregroundColor(.gray)
+                    .padding(.bottom, 20)
             }
             .ignoresSafeArea(edges: .top)
             .navigationBarHidden(true)
@@ -245,6 +247,11 @@ struct ContentView: View {
         formatter.pmSymbol = "PM"
         return formatter
     }()
+    
+    private func triggerHapticFeedback() {
+        let generator = UIImpactFeedbackGenerator(style: .medium)
+        generator.impactOccurred()
+    }
 }
 
 #Preview {
