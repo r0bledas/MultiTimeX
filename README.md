@@ -10,7 +10,6 @@ MultiTimeX is a simple and intuitive iOS app designed to help you keep track of 
 - **Start/Stop Functionality**: Simple controls to start and stop the countdown timer.
 - **Vibration Alert**: Notifies you with a vibration when the countdown reaches zero.
 - **User-Friendly Interface**: Designed with a clean and modern UI, ensuring a seamless user experience.
-- **Made by Ra-Rauw!**: A personal touch with a signature at the bottom of the app.
 
 ## Getting Started
 
