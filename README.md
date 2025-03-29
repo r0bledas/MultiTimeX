@@ -30,7 +30,7 @@ To get started with MultiTimeX, clone the repository and open the project in Xco
 
 ## Naming Schemes & Release Picking
 
-# Prefixes
+## Prefixes
 
 v: Stands for the regular iOS app version
 w: WatchOS app version
