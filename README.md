@@ -28,6 +28,14 @@ To get started with MultiTimeX, clone the repository and open the project in Xco
 2. Open the project in Xcode.
 3. Build and run the app on your iOS device or simulator.
 
+## Naming Schemes & Release Picking
+
+# Prefixes
+
+v: Stands for the regular iOS app version
+w: WatchOS app version
+vw: Merged iOS and WatchOS versions (under same scheme)
+
 ## Contributing
 
 Contributions are welcome! If you have suggestions for improvements or new features, feel free to open an issue or submit a pull request.
