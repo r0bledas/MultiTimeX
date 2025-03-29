@@ -32,9 +32,9 @@ To get started with MultiTimeX, clone the repository and open the project in Xco
 
 ## Prefixes
 
-v: Stands for the regular iOS app version
-w: WatchOS app version
-vw: Merged iOS and WatchOS versions (under same scheme)
+-v: Stands for the regular iOS app version  
+-w: WatchOS app version  
+-vw: Merged iOS and WatchOS versions (under same scheme)  
 
 ## Contributing
 
